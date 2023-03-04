@@ -1,0 +1,39 @@
+<MyFirstLayout>
+    MDScreen:
+        FitImage:
+            source: 'image/backgg.jpg'
+        MDBoxLayout:
+
+            orientation: 'vertical'
+            MDBoxLayout:
+                id: MainBox
+                orientation: 'vertical'
+                adaptive_height: True
+
+                MDTopAppBar:
+                    #md_bg_color: 'black'
+                    #opacity: 0.8
+                    specific_text_color: 'white'
+                    elevation: 0
+                    id: toolbar
+                    title: 'Reminder'
+                    left_action_items: [['dots-vertical', lambda x: root.callback(x)]]
+                    right_action_items: [['plus', lambda x: root.go_to_second_screen()]]
+                    anchor_title: "center"
+
+
+            MDBoxLayout:
+
+                orientation: 'vertical'
+                size: root.width, root.height
+
+
+
+                MDScrollView:
+                    MDList:
+                        id: remainder_list
+                        spacing: 10
+
+
+
+

@@ -1,0 +1,257 @@
+<NotificationCard>:
+    size_hint_y: None
+    height: "240dp"
+    padding: 5, 0, 5, 0
+    MDRelativeLayout:
+        size_hint_y: None
+        height: "240dp"
+        #md_bg_color:'blue'
+
+        MDCard:
+            orientation: 'vertical'
+            focus_behavior: True
+            height: "240dp"
+            border_radius: 5
+            elevation: 2
+            opacity: 0.9
+            halign: "center"
+            #md_bg_color: 'gray'
+            padding: 10, 0, 10, 0
+
+            MDRelativeLayout:
+
+                size_hint_y: None
+                adaptive_height: True
+                #md_bg_color: 'blue'
+                height: 80
+
+
+                MDHeroFrom:
+                    id: hero_name_form
+                    size_hint_x: .5
+                    adaptive_height: True
+                    height: self.minimum_height
+                    pos_hint: {"left": 1}
+                    #md_bg_color: 'blue'
+
+                    MDRelativeLayout:
+                        adaptive_height: True
+                        size: root.width, 80
+                        #md_bg_color: 'red'
+                        size_hint_x: .1
+
+
+                        MDIcon:
+                            icon:'account-tie'
+                            halign: "left"
+                            pos_hint: {"top": .65, "right": .82}
+
+                    MDRelativeLayout:
+                        adaptive_height: True
+                        size: root.width, 80
+                        #md_bg_color: 'grey'
+                        size_hint_x: .9
+
+
+                        MDLabel:
+                            id: task_name
+                            halign: "left"
+                            text: root.task_name
+                            font_style: "H6"
+                            x: 5
+
+                MDHeroFrom:
+                    id: hero_message_form
+                    size_hint_x: .5
+                    adaptive_height: True
+                    height: self.minimum_height
+                    pos_hint: {"right": 1}
+                    #md_bg_color: 'green'
+
+                    MDRelativeLayout:
+                        adaptive_height: True
+                        size: root.width, 80
+                        #md_bg_color: 'red'
+                        size_hint_x: .1
+
+                        MDIcon:
+                            icon:'message-alert'
+                            #halign: "center"
+                            pos_hint: {"top": .65, "right": .82}
+
+                    MDRelativeLayout:
+                        adaptive_height: True
+                        size: root.width, 80
+                        #md_bg_color: 'grey'
+                        size_hint_x: .9
+
+                        MDLabel:
+                            id: message
+                            text: root.message
+                            halign: "left"
+                            font_style: "H6"
+                            x: 5
+                            #md_bg_color: 'red'
+
+            MDRelativeLayout:
+                size_hint_y: None
+                adaptive_height: True
+                #md_bg_color: 'blue'
+                height: 80
+
+                MDHeroFrom:
+                    id: hero_period_form
+                    size_hint_x: .5
+                    adaptive_height: True
+                    height: self.minimum_height
+                    pos_hint: {"left": 1}
+                    #md_bg_color: 'blue'
+
+                    MDRelativeLayout:
+                        adaptive_height: True
+                        size: root.width, 80
+                        #md_bg_color: 'red'
+                        size_hint_x: .1
+
+                        MDIcon:
+                            icon:'calendar'
+                            halign: "left"
+                            pos_hint: {"top": .65, "right": .82}
+
+                    MDRelativeLayout:
+                        adaptive_height: True
+                        size: root.width, 80
+                        #md_bg_color: 'grey'
+                        size_hint_x: .9
+
+                        MDLabel:
+                            id: period_time
+                            halign: "left"
+                            text: root.period_time
+                            font_style: "H6"
+                            x: 5
+
+                MDHeroFrom:
+                    id: hero_time_form
+                    size_hint_x: .5
+                    adaptive_height: True
+                    height: self.minimum_height
+                    pos_hint: {"right": 1}
+                    #md_bg_color: 'green'
+
+                    MDRelativeLayout:
+                        adaptive_height: True
+                        size: root.width, 80
+                        #md_bg_color: 'red'
+                        size_hint_x: .1
+
+                        MDIcon:
+                            icon:'clock'
+                            halign: "left"
+                            pos_hint: {"top": .65, "right": .82}
+
+                    MDRelativeLayout:
+                        adaptive_height: True
+                        size: root.width, 80
+                        #md_bg_color: 'grey'
+                        size_hint_x: .9
+
+                        MDLabel:
+                            id: start_time
+                            text: root.start_time
+                            halign: "left"
+                            font_style: "H6"
+                            #md_bg_color: 'red'
+                            x: 5
+
+            MDRelativeLayout:
+                size_hint_y: None
+                adaptive_height: True
+                #md_bg_color: 'blue'
+                height: 80
+
+                MDHeroFrom:
+                    id: hero_long_day_form
+                    size_hint_x: .5
+                    adaptive_height: True
+                    height: self.minimum_height
+                    pos_hint: {"left": 1}
+                    #md_bg_color: 'blue'
+
+                    MDRelativeLayout:
+                        adaptive_height: True
+                        size: root.width, 80
+                        #md_bg_color: 'red'
+                        size_hint_x: .1
+                    MDRelativeLayout:
+                        adaptive_height: True
+                        size: root.width, 80
+                        #md_bg_color: 'grey'
+                        size_hint_x: .9
+
+
+
+                        MDLabel:
+                            id: long_day
+                            text: root.long_course
+                            font_style: "H6"
+                            halign: "left"
+                            x: 5
+
+                        MDLabel:
+                            id: long_day_text
+                            text: root.long_day_text
+                            font_style: "H6"
+                            halign: "center"
+                            x: -34
+                MDHeroFrom:
+                    id: hero_change_button
+                    size_hint_x: .5
+                    adaptive_height: True
+                    height: self.minimum_height
+                    pos_hint: {"right": 1}
+                    #md_bg_color: 'green'
+
+                    MDRelativeLayout:
+                        adaptive_height: True
+                        size: root.width, 80
+                        size_hint_x: .80
+                        #md_bg_color: 'red'
+
+
+                        MDSwitch:
+                            id: on_off_switch_notification
+                            width: dp(44)
+                            on_active: root.on_off_notification(*args)
+                            #pos_hint: {"top": .65, "right": .82}
+                            #active: root.switch
+                            #on_active: root.dispatch('on_active')
+                            halign: 'left'
+                            #pos_hint: {'center_x': .5, 'center_y': .5}
+                            #pos_hint: {"top": .65, "right": .82}
+
+
+
+                        MDLabel:
+                            id: id_name
+                            halign: "center"
+                            text: root.id_name
+                            font_style: "H6"
+                            x: 5
+
+
+                    MDRelativeLayout:
+                        adaptive_height: True
+                        size: root.width, 80
+                        #md_bg_color: 'red'
+                        size_hint_x: .20
+
+                        MDIconButton:
+                            id: change_view
+                            on_release: root.dispatch('on_release')
+                            icon: 'book-edit'
+                            pos_hint: {"top": .80, "right": 1}
+                            text: "root.task_name"
+                            font_style: "H6"
+                            #md_bg_color: 'red'
+

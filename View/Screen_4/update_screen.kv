@@ -1,0 +1,91 @@
+<UpdateScreen>
+    MDBoxLayout:
+        orientation: 'vertical'
+        spacing: 12
+
+        MDTopAppBar:
+            #md_bg_color: 'black'
+            specific_text_color: 'white'
+            left_action_items: [['arrow-left', lambda x: root.go_to_check_view_screen()]]
+            right_action_items: [['folder-plus', lambda x: root.update_task()]]
+            elevation: 0
+            id: long_course
+            title: ''
+            anchor_title: "center"
+
+        MDBoxLayout:
+            orientation: 'vertical'
+            size: root.width, root.height
+            padding: 15
+            spacing: 15
+            #md_bg_color: "green"
+
+            MDTextField:
+                id: upload_name_of_remainder
+                hint_text: 'Name of task*'
+                mode: "rectangle"
+                font_size: 32
+                size_hint: 1, .2
+
+            MDTextField:
+                id: upload_message_of_remainder
+                hint_text: 'MESSAGE*'
+                mode: "rectangle"
+                font_size: 32
+                size_hint: 1, .2
+
+            MDTextField:
+                id: upload_reminder_view
+                hint_text: 'How many times you want to be reminded'
+                text: '1'
+                mode: "rectangle"
+                font_size: 32
+                size_hint: 1, .2
+
+
+            MDLabel:
+                adaptive_height: True
+                text: 'Select date and time'
+                halign: 'center'
+
+            MDSegmentedControl:
+                on_active: root.on_active(*args)
+                pos_hint: {"center_x": .5, "center_y": .5}
+
+                MDSegmentedControlItem:
+                    text: "Date"
+
+                MDSegmentedControlItem:
+                    text: "Time"
+
+
+#            MDBoxLayout:
+#                orientation: 'horizontal'
+#                #size: root.width, root.height
+#                size_hint_y: .2
+#                id: segmented_layout
+
+
+            MDLabel:
+                id : btn_date_picker
+                text: ''
+                custom_color: "white"
+                font_size: 28
+                size_hint: 1, .3
+                halign: 'center'
+                #on_press: root.show_date_picker()
+
+
+            MDLabel:
+                id: btn_add_remainder
+                font_size: 32
+                halign: 'center'
+                size_hint: 1, .2
+                font_size: 28
+                #on_release: root.add_remainder()
+                pos_hint: {'center_x': .5, 'center_y': .5}
+                #md_bg_color: app.theme_cls.primary_color
+
+
+
+

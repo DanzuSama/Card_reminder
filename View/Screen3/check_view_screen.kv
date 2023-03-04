@@ -1,0 +1,218 @@
+<CheckViewScreen>
+    MDBoxLayout:
+        id: main_box
+        orientation: 'vertical'
+
+        MDTopAppBar:
+            #md_bg_color: 'black'
+            specific_text_color: 'white'
+            elevation: 0
+            id: toolbar
+            left_action_items: [['arrow-left', lambda x: root.on_tap_back_button()]]
+            right_action_items: [['dots-vertical', lambda x: None]]
+            anchor_title: "center"
+
+        MDBoxLayout:
+            adaptive_height: True
+            spacing: 8
+            #padding: 12, 0, 12, 0
+            #md_bg_color: 'gray'
+
+
+            MDLabel:
+                text: 'Name: '
+                size_hint: None, None
+                size: main_box.width / 2.1, 46
+                halign: "right"
+                #md_bg_color: 'red'
+
+            MDLabel:
+                id: name_form
+                text: 'NAME_TASK'
+                size_hint: None, None
+                size: main_box.width / 2, 46
+                halign: "left"
+                #md_bg_color: 'red'
+
+        MDSeparator:
+            size_hint_x: None
+            width: main_box.width
+            #color: 'gray'
+            pos_hint: {'center_y': .5}
+
+
+        MDWidget:
+            size_hint_y: None
+            height: 6
+            md_bg_color: 'gray'
+
+        MDBoxLayout:
+            id: relative_layout
+            orientation: 'vertical'
+            adaptive_height: True
+            size_hint: 1, .1
+            padding: 12, 0, 12, 0
+            #md_bg_color: 'grey'
+
+            MDBoxLayout:
+                id: box_layout_1
+
+                MDLabel:
+                    text: ' Message: '
+                    size_hint: None, None
+                    halign: "left"
+                    #md_bg_color: 'gray'
+                    size: 86, box_layout_1.height
+
+                MDLabel:
+                    id: message_form
+                    halign: "left"
+                    #text: " MESSAGE"
+                    size: box_layout_1.width / 1, box_layout_1.height
+
+            MDSeparator:
+                size_hint_x: None
+                width: main_box.width / 1.04
+                #color: 'gray'
+
+            MDBoxLayout:
+                id: box_layout_2
+
+
+                MDLabel:
+                    text: ' Period : '
+                    size_hint: None, None
+                    halign: "left"
+                    #md_bg_color: 'gray'
+                    size: 86, box_layout_2.height
+
+                MDLabel:
+                    id: period_form
+                    halign: "left"
+                    #text: " MESSAGE"
+                    size: box_layout_2.width / 1, box_layout_2.height
+
+            MDSeparator:
+                size_hint_x: None
+                width: main_box.width / 1.04
+                #color: 'gray'
+
+            MDBoxLayout:
+                id: box_layout_3
+
+                MDLabel:
+                    text: ' Time : '
+                    size_hint: None, None
+                    halign: "left"
+                    #md_bg_color: 'gray'
+                    size: 86, box_layout_3.height
+
+                MDLabel:
+                    id: time_form
+                    halign: "left"
+                    size: box_layout_3.width / 1, box_layout_3.height
+
+            MDSeparator:
+                size_hint_x: None
+                width: main_box.width / 1.04
+                #color: 'gray'
+
+
+            MDBoxLayout:
+                id: box_layout_4
+
+                MDLabel:
+                    text: ' Long : '
+                    size_hint: None, None
+                    halign: "left"
+                    #md_bg_color: 'gray'
+                    size: 86, box_layout_4.height
+
+                MDLabel:
+                    id: long_form
+                    halign: "left"
+                    size: box_layout_4.width / 1, box_layout_4.height
+
+            MDSeparator:
+                size_hint_x: None
+                width: main_box.width / 1.04
+                #color: 'gray'
+
+            MDBoxLayout:
+                id: box_layout_5
+
+                MDLabel:
+                    text: ' How time : '
+                    size_hint: None, None
+                    halign: "left"
+                    #md_bg_color: 'gray'
+                    size: 86, box_layout_5.height
+
+                MDLabel:
+                    id: how_time_form
+                    halign: "left"
+                    size: box_layout_5.width / 1, box_layout_5.height
+
+            MDSeparator:
+                size_hint_x: None
+                width: main_box.width / 1.04
+
+
+            MDBoxLayout:
+                adaptive_height: True
+
+
+
+            MDBoxLayout:
+                id: box_layout_end
+                orientation: 'horizontal'
+                padding: 8
+                #md_bg_color: 'gray'
+
+                MDBoxLayout:
+                    id: box_layout_end_1
+                    adaptive_height: True
+                    padding: 8
+                    spacing: 8
+                    #md_bg_color: 'gray'
+                    orientation: 'horizontal'
+
+
+                    MDSeparator:
+                        halign: 'right'
+                        size: box_layout_end_1.width / 1.1, 1
+                        width: 32
+                        #color: 'gray'
+                        pos_hint: {'center_y': .5}
+
+                    MDIconButton:
+                        icon: 'update'
+                        halign: 'right'
+                        on_release: root.update_reminder()
+                        #halign: "center"
+
+                    MDSeparator:
+                        size_hint_x: None
+                        halign: 'right'
+                        width: 36
+                        #color: 'gray'
+                        pos_hint: {'center_y': .5}
+
+                MDBoxLayout:
+                    id: box_layout_end_2
+                    adaptive_height: True
+                    padding: 8
+                    spacing: 8
+                    orientation: 'horizontal'
+
+                    MDIconButton:
+                        icon: 'delete'
+                        #halign: "center"
+                        on_release: root.on_tap_delete_button()
+
+                    MDSeparator:
+                        size_hint_x: None
+                        width: 32
+                        size: box_layout_end_2.width / 1.18, 1
+                        #color: 'gray'
+                        pos_hint: {'center_y': .5}
