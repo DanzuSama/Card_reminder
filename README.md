@@ -1,4 +1,4 @@
-<h1 align="center">Card reminder</a> </h1>
+<h1 align="center">Reminder</a> </h1>
 
 <h4 align="center">This project was created during my Python course as my final work. The application has 4 windows - main, - create, - view, - edit. The program is divided into classes, the launch is main.py </h4>
 
