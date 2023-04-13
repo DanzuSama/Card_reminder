@@ -21,11 +21,6 @@ What is not working?
 <h4 align="center"> -There are extra buttons that do not work. </h4>
 <h4 align="center"> -Little bugs in the GUI. </h4>
 
-<h2 align="center"> In the plans </h2>
-<h4 align="center"> An attempt was made to build the apk using a bulldozer. But since I have a Windows system, I ran into some problems. </h4>
-<h4 align="center"> Bring the application to the proper form, remove unnecessary buttons and fields for debugging. </h4>
-<h4 align="center"> 
-<h4 align="center"> Fix some bugs </h4>
 
 
 <details>
